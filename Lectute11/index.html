@@ -8,15 +8,16 @@
     <script src="../angular.min.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="MsgController as Ctrl">
 
     <h1>Expressions and Interolation</h1>
-    <div ng-controller="MsgController as Ctrl" >
-        {{Ctrl.name}}
-        {{Ctrl.sayMessage}}
+    <div>
+        {{Ctrl.name}} :
+        {{Ctrl.sayMessage()}}
     </div>
-    <button ng-click="feedTheUser()">feed Me!</button>
-    <br>
-    <img src="imagens/user_{{Ctrl.state}}.png" alt="">
+    <button ng-click="Ctrl.feedTheUser()">feed Me!</button>
+    <br><br>
+    <img ng-src="images/user_{{Ctrl.state}}.png" 
+    style="width: 150px; height: 150px;" alt="">
 </body>
 </html>

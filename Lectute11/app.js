@@ -9,10 +9,15 @@
 
         let vm = this;
         vm.name = "Almeida";
+        vm.state = "hungry";
         
-        Ctrl.sayMessage = function() {
+        vm.sayMessage = function() {
             return "The user lieks to eat shrinps!"; 
         }; 
+
+        vm.feedTheUser = function() {
+            vm.state = "fed";
+        };
 
     }
 
