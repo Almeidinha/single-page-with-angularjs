@@ -1,0 +1,12 @@
+input.invalid {
+    border-color: #ff0000;
+}
+input.valid {
+    border-color: #008000;
+}
+span.invalid, i.error {
+    color: #ff0000;
+}
+span.valid {
+    color: #008000;
+}
