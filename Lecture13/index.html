@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MsgApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="MsgController as Ctrl">
+
+    <h1>Expressions and Interolation</h1>
+    <div>
+        Name: {{Ctrl.name}} <br>
+        Original Message: {{Ctrl.sayMessage()}} <br>
+        Loves Messgae: {{Ctrl.sayLovesMessage()}} <br>
+        Truth: {{Ctrl.sayLovesMessage() | truth : 'shrinps' : 'shrinps Strogonoff'}} <br>
+        BIG TRUTH: {{Ctrl.sayLovesMessage() | truth : 'shrinps' : 'shrinps Strogonoff' | uppercase}}
+    </div>
+    <button ng-click="Ctrl.feedTheUser()">feed Me!</button>
+    <br><br>
+    <img ng-src="images/user_{{Ctrl.state}}.png" 
+    style="width: 150px; height: 150px;" alt="">
+</body>
+</html>
