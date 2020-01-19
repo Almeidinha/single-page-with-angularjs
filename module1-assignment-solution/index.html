@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="foodLimiterApp">
+    <div ng-controller="foodLimiterAppController as Ctrl">
+        <h2>Is this too much food?</h2>
+
+        <label for="foodList">List of food: </label>
+        <input type="text" name="" id="foodList" ng-model="Ctrl.foodList"> <i style="color: red">*</i> Not considering empty spaces.
+        <br><br>
+        <button type="button" ng-click="Ctrl.checkAmount()">Check If Too Much</button>
+        <br>
+        <span>{{Ctrl.message}}</span>
+
+    </div>
+</body>
+</html>
