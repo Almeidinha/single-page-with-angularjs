@@ -25,10 +25,10 @@
         // you need to use the name you gave in the 'controllerAS declaration'
         // or use the next method wich watches the controllerAs object and 
         // return the variable you and to watch
-        $scope.$watch('Ctrl.onceCounter', function(newValue, oldValue) {
+        /*$scope.$watch('Ctrl.onceCounter', function(newValue, oldValue) {
             console.log("onceCounter old Value: ", oldValue);
             console.log("onceCounter new Value: ", newValue);
-        });
+        });*/
         
         /*$scope.$watch(function watch(scope) {
             return vm.onceCounter;
@@ -37,10 +37,10 @@
             console.log("new Value: ", newValue);
         }, true);*/
 
-        $scope.$watch('Ctrl.counter', function(newValue, oldValue) {
+        /*$scope.$watch('Ctrl.counter', function(newValue, oldValue) {
             console.log("counter old Value: ", oldValue);
             console.log("counter new Value: ", newValue);
-        }, true);
+        }, true);*/
 
     }
 

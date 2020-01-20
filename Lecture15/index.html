@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Counter App - ng-reoeat</title>
+    <title>The Digest Cycle</title>
 
     <script src="../angular.min.js"></script>
     <script src="app.js"></script>
-
+    
 </head>
 <body ng-controller="CounterController as Ctrl">
     <h1>The Digest Cycle</h1>
-    <div>
-        <button ng-click="Ctrl.showNumberOfWatchers()">Log # Watchers</button>
-    </div>
-    <div>
-        <button ng-click="Ctrl.countOnce()">Up Once Counter (once)</button>
-        <button ng-click="Ctrl.upCounter()">Increment Counter</button>
-    </div>
 
     <div>
-        Once onceCouter: {{ Ctrl.onceCounter }} <br>
-        Once Couter: {{ Ctrl.counter }} <br>
+        <button ng-click="Ctrl.upCounter()">Increment Counter</button>
     </div>
+    <div>
+        Regular Counter: {{Ctrl.counter}}
+    </div>
+
 </body>
 </html>

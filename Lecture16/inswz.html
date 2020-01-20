@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BindingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-way, 1-way and 1-time Binding</title>
+
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-controller="BindingController as Ctrl">
+    <h1>2-way, 1-way and 1-time Binding</h1>
+
+    <button ng-click="Ctrl.showNumberOfWatchers()">Log # of Watchers</button>
+    <button ng-click="Ctrl.setFullName()">Set Full Name</button>
+
+    <br><br>
+    <b>Full name is: {{ :: Ctrl.fullName}}</b>
+    <br><br>
+    <button ng-click="Ctrl.logFirsName()">Log First Name</button>
+    <button ng-click="Ctrl.logFullName()">Log Full Name</button>
+
+    <div>
+        <input type="text" ng-model="Ctrl.firstName">
+    </div>
+    
+    
+</body>
+</html>
