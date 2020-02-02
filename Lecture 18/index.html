@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ng-repeat + filter</title>
+
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="ShoppingListApp">
+    <h1>Ng-repeat + filter</h1>
+
+    <div ng-controller="ShoppingListController as Ctrl">
+
+        <input ng-model="Ctrl.search" type="text">
+
+        <ul>
+            <li ng-repeat="item in Ctrl.shoppingList | filter : Ctrl.search">{{item}}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
